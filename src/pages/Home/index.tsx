@@ -20,6 +20,8 @@ const values = [
   }
 ]
 
+import { Link } from 'react-router-dom'
+
 export default function Home() {
   return (
     <section className="space-y-12">
@@ -33,15 +35,15 @@ export default function Home() {
           engineering, and business teams.
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <a
+          <Link
             className="rounded-full bg-white px-5 py-2 text-sm font-semibold text-slate-900"
-            href="/jobs"
+            to="/jobs"
           >
             Explore jobs
-          </a>
-          <a className="rounded-full border border-white/40 px-5 py-2 text-sm" href="/campus">
+          </Link>
+          <Link className="rounded-full border border-white/40 px-5 py-2 text-sm" to="/campus">
             Campus hiring
-          </a>
+          </Link>
         </div>
       </div>
 
