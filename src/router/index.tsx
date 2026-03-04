@@ -6,18 +6,23 @@ import JobDetail from '../pages/JobDetail'
 import Campus from '../pages/Campus'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile'
+import NotFound from '../pages/NotFound'
 
-export const router = createBrowserRouter([
-  {
-    path: '/',
-    element: <RootLayout />,
-    children: [
-      { index: true, element: <Home /> },
-      { path: 'jobs', element: <JobList /> },
-      { path: 'jobs/:id', element: <JobDetail /> },
-      { path: 'campus', element: <Campus /> },
-      { path: 'login', element: <Login /> },
-      { path: 'profile', element: <Profile /> }
-    ]
-  }
-])
+export const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <RootLayout />,
+      children: [
+        { index: true, element: <Home /> },
+        { path: 'jobs', element: <JobList /> },
+        { path: 'jobs/:id', element: <JobDetail /> },
+        { path: 'campus', element: <Campus /> },
+        { path: 'login', element: <Login /> },
+        { path: 'profile', element: <Profile /> },
+        { path: '*', element: <NotFound /> }
+      ]
+    }
+  ],
+  { basename: '/career-website' }
+)
