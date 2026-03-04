@@ -42,6 +42,12 @@ src
 └── main.tsx
 ```
 
+## 📚 Documentation
+- docs/STRUCTURE.md
+- docs/WORKFLOWS.md
+- docs/DEPLOYMENT.md
+- docs/PRS.md
+
 ## 🚀 Development
 ```bash
 npm install
